@@ -1,0 +1,41 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
+	<!--导入dao配置文件-->
+	<import resource="classpath:applicationContext-dao.xml" />
+	<!-- 用户管理的service -->
+	<bean id="usersService" class="cn.edu.dlnu.service.impl.UsersServiceImpl"/>
+	<!--新闻管理的service-->
+	<bean id="newsService" class="cn.edu.dlnu.service.impl.NewsServiceImpl"/>
+	<!--评论管理的service-->
+	<bean id="commentService" class="cn.edu.dlnu.service.impl.CommentServiceImpl"/>
+	<!--分享管理的service-->
+	<bean id="shareService" class="cn.edu.dlnu.service.impl.ShareServiceImpl"/>
+	<!--分类管理的service-->
+	<bean id="categoryService" class="cn.edu.dlnu.service.impl.CategoryServiceImpl"/>
+	<!--图片管理的service-->
+	<bean id="pictureService" class="cn.edu.dlnu.service.impl.PictureServiceImpl"/>
+	<!--视频管理的service-->
+	<bean id="videoService" class="cn.edu.dlnu.service.impl.VideoServiceImpl"/>
+	<!--点赞管理的service-->
+	<bean id="upService" class="cn.edu.dlnu.service.impl.UpServiceImpl"/>
+	<!--图片组管理的service-->
+	<bean id="picGroupService" class="cn.edu.dlnu.service.impl.PicGroupServiceImpl"/>
+	<!--关注管理的service-->
+	<bean id="focusService" class="cn.edu.dlnu.service.impl.FocusServiceImpl"/>
+	<!--二级评论管理的service-->
+	<bean id="commentLevel2Service" class="cn.edu.dlnu.service.impl.CommentLevel2ServiceImpl"/>
+	<!--系统管理员service-->
+	<bean id="adminService" class="cn.edu.dlnu.service.impl.AdminServiceImpl"/>
+</beans>

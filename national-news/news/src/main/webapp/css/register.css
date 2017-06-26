@@ -1,0 +1,194 @@
+body{
+background:url(/news/images/bg-1.jpg) no-repeat;
+ -o-transition: all 1.5s;
+ -moz-transition: all 1.5s;
+ -webkit-transition: all 1.5s;
+ -ms-transition: all 1.5s;
+ transition: all 1.5s;
+}
+#logo{
+width:150px;
+height:150px;
+position:absolute;
+top:50px;
+left:227px;
+}
+.baishi{
+position:absolute;
+top:165px;
+color:#0000FF;
+font-weight:900;
+left:244px;
+font-size:24px;
+font-family:"΢���ź�";
+height:60px;
+padding-top:40px;
+width:140px;
+}
+.form{
+width:600px;
+height:750px;
+/*border:solid 1px #000000;*/
+position:absolute;
+top:50px;
+left:377px;
+}
+.form label{
+width:100px;
+height:25px;
+position:absolute;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:900;
+font-size:20px;
+color:#FFFFFF;
+}
+.title{
+width:150px;
+height:50px;
+font-size:32px;
+line-height:40px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:900;
+position:absolute;
+top:0px;
+left:245px;
+color:#FFFFFF;
+}
+.form .text{
+width:200px;
+height:40px;
+border:solid 2px #CCCCCC;
+border-radius:10px;
+background-color:transparent;
+position:absolute;
+text-indent:1em;
+}
+.name_label{
+left:150px;
+top:85px;
+}
+.userName{
+top:75px;
+left:245px;
+}
+.set_label{
+left:150px;
+top:137px;
+}
+.setPassword{
+top:125px;
+left:245px;
+}
+.sure_label{
+left:150px;
+top:185px;
+}
+.surePassword{
+top:175px;
+left:245px;
+}
+.gender_label{
+left:150px;
+top:235px;
+}
+.radio{
+width:18px;
+height:18px;
+position:absolute;
+}
+.gender_radio1{
+top:235px;
+left:280px;
+}
+.gender_radio2{
+top:235px;
+left:360px;
+}
+.nv{
+top:233px;
+left:305px;
+}
+.nan{
+top:233px;
+left:385px;
+}
+.birth_label{
+top:280px;
+left:150px;
+}
+.birth_date{
+position:absolute;
+top:277px;
+left:275px;
+background-color:transparent;
+border:solid 2px #CCCCCC;
+border-radius:5px;
+color:#FFFFFF;
+}
+.mail_label{
+top:325px;
+left:150px;
+}
+.mail{
+top:315px;
+left:250px;
+}
+#userLevel {
+ top: 533px;
+ left: 249px;
+ position: absolute;
+ width: 205px;
+ height: 45px;
+ font-size: 16px;
+ font-weight: 600;
+ padding: 10px;
+ text-align: center;
+ line-height: 42px;
+ padding-left: 59px;
+ color: #fff;
+ border: solid 2px #CCCCCC;
+ border-radius: 10px;
+ background-color: transparent;
+}
+.level_label{
+ left: 150px;
+ top: 543px;
+}
+.photo_label{
+top:415px;
+left:150px;
+}
+
+.photo_img{
+width:150px;
+height:150px;
+position:absolute;
+top:370px;
+left:250px;
+border:solid 2px #CCCCCC;
+}
+#photo_upload {
+ width: 162px;
+ height: 23px;
+ background-color: #CCCCCC;
+ position: absolute;
+ top: 433px;
+ left: 411px;
+}
+#submit{
+width:150px;
+height:40px;
+background-color:#0066CC;
+position:absolute;
+top:610px;
+left:240px;
+border:0px;
+border-radius:5px;
+color:#FFFFFF;
+font-family: Arial, Helvetica, sans-serif;
+font-size:20px;
+font-weight:900;
+}
+#submit:hover{
+background-color:#006699;
+}

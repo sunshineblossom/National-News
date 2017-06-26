@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>用户注册</title>
+<link type="text/css" rel="stylesheet" href="../css/register.css">
+<meta charset="utf-8">
+</head>
+<body>
+<div class="form">
+	<span class="title">用户注册</span>
+	<label class="name_label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label><input type="text" id="userName" class="userName text" maxlength="20" size="12">
+	<label class="set_label">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label><input type="password" id="setPassword" class="setPassword text" maxlength="20" size="12">
+	<label class="sure_label">确认密码</label><input type="password" id="surePassword" class="surePassword text" maxlength="20" size="12">
+	<label class="gender_label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label><input type="radio" id="gender1" name="gender" class="gender_radio1 radio" checked><label class="nv">女</label> 
+	<input type="radio" id="gender2" name="gender" class="gender_radio2 radio"><label class="nan">男</label>
+	<label class="birth_label">出生日期</label>	<input type="date" id="birth" class="birth_date">	
+	<label class="mail_label">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</label><input type="text" id="mail" class="mail text">	
+	<label class="photo_label">头&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像</label><img id="photo" class="photo_img" src="">	
+	<input type="file" name="file" id="photo_upload"/>
+	<button id="submit">注册</button>			 
+</div>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/register.js"></script>
+</body>
+</html>

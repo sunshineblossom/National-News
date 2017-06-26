@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>民新网</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/editor.css">
+</head>
+<body>
+
+	<header class="header">
+		<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"><strong>民新网</strong></a>
+				</div>
+				<!--向左对齐-->
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-home"></span>
+							<strong>首页</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#"><span class="glyphicon glyphicon-eye-open"></span>
+							<strong>发现</strong>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-hd-video"></span>
+							<strong>视频</strong>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<strong>榜单</strong><b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><strong>小时榜</strong></a></li>
+							<li class="divider"></li>
+							<li><a href="#"><strong>周榜</strong></a></li>
+							<li class="divider"></li>
+							<li><a href="#"><strong>月榜</strong></a></li>
+						</ul>
+					</li>
+					<li>
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="热门话题：">
+							</div>
+							<button type="submit" class="btn btn-default"><strong>搜索</strong></button>
+						</form>
+					</li>
+				</ul>
+
+				<!--向右对齐-->
+				<ul id="login-area" class="nav navbar-nav navbar-right" style="display: block;">
+					<li>
+						<a href="register.html"><strong>注册</strong></a>
+					</li>
+					<li>
+						<a href="#"><span>|</span></a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target=".myModal"><strong>登录</strong></a>
+					</li>
+				</ul>
+				<!--向右对齐-->
+				<ul id="login-after" class="nav navbar-nav navbar-right" style="display: none;">
+					<li>
+						<a href="#"><strong></strong></a>
+					</li>
+					<li>
+						<a href="#"><span>我的关注</span></a>
+					</li>
+					<li>
+						<a href="#"><strong>我的粉丝</strong></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- 遮罩层实现登录注册 -->
+		<div class="container-fluid text-center regist-login">
+			<div class="modal fade myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
+				<div class="modal-dialog"><!--modal-dialog,弹出层-->
+					<div class="modal-content regist-content"><!--modal-content,弹出层内容区域-->
+						<div class="modal-header">
+							<div class="container-fluid text-center">
+								<div class="row"><button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角--></div>
+							</div>
+						</div><!--modal-header,弹出层头部区域-->
+						<div class="modal-body">
+							<div class="container login-content">
+								<div class="login-username">
+									<span class="glyphicon glyphicon-user user-icon"></span>
+									<input class="input-username" placeholder="手机号/邮箱">
+								</div>
+								<div class="login-password">
+									<span class="glyphicon glyphicon-lock user-icon"></span>
+									<input class="input-username" placeholder="6~12位密码">
+								</div>
+								<div class="remember-me">
+									<input type="checkbox">
+									<span>&nbsp;记住我一个月</span>
+								</div>
+								<div class="btn-login-area">
+									<button type="button" class="btn btn-success btn-login">登录</button>
+								</div>
+								<div class="btn-regist-area">
+									<button type="button" class="btn btn-danger btn-regist">立即注册</button>
+								</div>
+							</div>  
+						</div><!--modal-body,弹出层主体区域-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- 遮罩层实现转发新闻 -->
+	<div class="container-fluid text-center">
+		<div class="modal fade share" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
+			<div class="modal-dialog"><!--modal-dialog,弹出层-->
+				<div class="modal-content share-content"><!--modal-content,弹出层内容区域-->
+					<div class="modal-header">
+						<div class="container-fluid text-center">
+							<div class="row">
+								<div class="col-lg-2"><span class="share-header">转发新闻</span></div>
+								<div class="col-lg-10"><button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角--></div>
+							</div>
+						</div>
+					</div><!--modal-header,弹出层头部区域-->
+					<div class="modal-body">
+						<div class="source">
+							<a href="#" class="share-username">@私人音乐厅</a>:<span class="share-source-content">
+
+						</span>
+					</div>
+					<div class="share-comment">
+						<textarea class="share-c-input" placeholder="写下您的评论..."></textarea>
+						<div class="share-c">
+							<div class="share-submit">
+								转发
+							</div>
+						</div>
+					</div>
+					<div class="share-list-region">
+						<div class="share-list-number">当前已转发<span>51</span>次</div>
+						<div class="separator"></div>
+					</div>
+				</div><!--modal-body,弹出层主体区域-->
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main-content">		  
+	<div class="top">
+		<div class="user-img-region">
+			<a href="#"><img src="../images/6.jpg" class="user-img"></a>
+		</div>
+		<div class="username-region">
+			<h3 class="pf-username">呆呆的木头人</h3>
+		</div>
+		<div class="self-introduction">
+			<a href="#">一句话介绍自己吧</a>
+		</div>
+		<div class="nav-btn">
+			<div class="row">
+				<div class="col-lg-3">
+					<a href="javascript:void(0);" class="homepage">我的主页</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="#" class="photo">我的相册</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="javascript:void(0);" class="manage-center">管理中心</a>
+				</div>
+				<div class="col-lg-3">
+					<a href="javascript:void(0);" class="article">我的文章</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="mylog">
+			<div class="log-head">
+				<a href="#"><img class="log-user-img" src="../images/9.jpg"></a>
+				<div class="row log-username"><a href="#">呆呆的木头人</a></div>
+				<div class="row log-publishtime"><span>3月18日 20:59</span></div>
+			</div>
+			<div class="log-content">
+				现在都到白色情人节的尾巴了，然鹅我却在今天压了一下午的马路，关键是还被骂了一下午....伤心..发个微博纪念一下... ​​​​
+			</div>
+			<div class="log-footer">
+				<div class="row">
+					<div class="col-lg-3 log-share"><a href="#"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;1212</a></div>
+					<div class="col-lg-3 log-comment"><a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;2131</a></div>
+					<span style="display: none;" class="click-count">0</span>
+					<div class="col-lg-3 log-handup"><a href="#"><span class="glyphicon glyphicon-hand-up"></span>&nbsp;12</a></div>
+					<div class="col-lg-3 log-delete"><a href="#"></span>&nbsp;删除</a></div>
+				</div>
+			</div>
+
+				<!-- <div class="comment">
+					<div class="comment-raise">
+							<div class="user-icon-default">
+								<span class="glyphicon glyphicon-user"></span>
+							</div>
+							<div class="input-group input-box">
+							  <input type="text" class="form-control input-area" placeholder="填写您的评论..." aria-describedby="basic-addon2">
+							  <span class="input-group-addon" id="basic-addon2">评论</span>
+							</div>
+					</div>
+					<div class="comment-list">
+							<ul>
+								<li class="comment-item">
+									<div class="comment-item-box">
+										<div class="comment-user-img"><a href="#"><img src="../images/7.jpg"></a>
+										<a href="#" class="comment-username">呆呆的木头人</a>
+										<span class="comment-date">5小时前</span>
+										</div>
+										<div class="comment-content">
+											<p>可别去。我去了，我们五个人，进村收每人50元，去各个家里但是没有收费，去了谢广坤那个人家，人家正在吃饭就去看了，再就大脚超市卖纪念品和山货，那地方没意思</p>
+										</div>
+										<div class="comment-action">
+											<span class="reply">回复&nbsp;⋅&nbsp;</span>
+											<span style="display: none;">52</span>
+											<span class="reply-count">52条回复
+											<span class="glyphicon glyphicon-chevron-down icon-down"></span>
+											</span>
+											<div class="up-and-report">
+												<span class="up-number">514</span>	
+												<span class="glyphicon glyphicon-hand-up up-icon"></span>
+												<span class="glyphicon glyphicon-exclamation-sign report-icon"></span>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>	
+					</div>
+					<div class="load-more">
+						查看更多评论
+					</div>
+				</div> -->
+			</div>
+
+			<div class="mylog">
+				<div class="log-head">
+					<a href="#"><img class="log-user-img" src="../images/9.jpg"></a>
+					<div class="row log-username"><a href="#">呆呆的木头人</a></div>
+					<div class="row log-publishtime"><span>3月18日 20:59</span></div>
+				</div>
+				<div class="log-content">
+					现在都到白色情人节的尾巴了，然鹅我却在今天压了一下午的马路，关键是还被骂了一下午....伤心..发个微博纪念一下... ​​​​
+				</div>
+				<div class="log-footer">
+					<div class="row">
+						<div class="col-lg-3 log-share"><a href="#" data-toggle="modal" data-target=".share"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;2113</a></div>
+						<div class="col-lg-3 log-comment"><a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;2121</a></div>
+						<span style="display: none;" class="click-count">0</span>
+						<div class="col-lg-3 log-handup"><a href="#"><span class="glyphicon glyphicon-hand-up"></span>&nbsp;12</a></div>
+						<div class="col-lg-3 log-delete"><a href="#"></span>&nbsp;删除</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- 转发后的日志 -->
+			<div class="mylog">
+				<div class="log-head">
+					<a href="#"><img class="log-user-img" src="../images/9.jpg"></a>
+					<div class="row log-username"><a href="#">呆呆的木头人</a></div>
+					<div class="row log-publishtime"><span>3月18日 20:59</span></div>
+				</div>
+				<div class="log-content">
+					现在都到白色情人节的尾巴了，然鹅我却在今天压了一下午的马路，关键是还被骂了一下午....伤心..发个微博纪念一下... ​​​​
+				</div>
+				<div class="share-ref">
+					<div class="ref-mylog">
+						<div class="ref-log-head">
+							<a href="#"><img class="ref-log-user-img" src="../images/9.jpg"></a>
+							<div class="row ref-log-username"><a href="#">呆呆的木头人</a></div>
+							<div class="row ref-log-publishtime"><span>3月18日 20:59</span></div>
+						</div>
+						<div class="ref-log-content">
+							现在都到白色情人节的尾巴了，然鹅我却在今天压了一下午的马路，关键是还被骂了一下午....伤心..发个微博纪念一下... ​​​​
+						</div>
+					</div>
+				</div>
+				<div class="log-footer">
+					<div class="row">
+						<div class="col-lg-3 log-share"><a href="#" data-toggle="modal" data-target=".share"><span class="glyphicon glyphicon-share-alt"></span>&nbsp;2113</a></div>
+						<div class="col-lg-3 log-comment"><a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;2121</a></div>
+						<span style="display: none;" class="click-count">0</span>
+						<div class="col-lg-3 log-handup"><a href="#"><span class="glyphicon glyphicon-hand-up"></span>&nbsp;12</a></div>
+						<div class="col-lg-3 log-delete"><a href="#"></span>&nbsp;删除</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="profile-info" style="display: none;">
+			<div class="profile-title">
+				<span class="base-info">基本信息</span>
+				<div class="line"></div>
+				<button class="btn btn-default btn-edit">编辑</button>
+			</div>
+			<div class="profile-info-list">
+				<ul class="show-area">
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>用户名</span></div>
+						<div class="info-show"><span>呆呆的木头人</span></div>
+
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>性&nbsp;别</span></div>
+						<div class="info-show"><span>男</span></div>
+
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>生&nbsp;日</span></div>
+						<div class="info-show"><span>1994-02-15</span></div>
+
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>简&nbsp;介</span></div>
+						<div class="info-show"><span>never quit,never stop</span></div>
+
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>邮&nbsp;箱</span></div>
+						<div class="info-show"><span>123@qq.com</span></div>
+
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>注册时间</span></div>
+						<div class="info-show"><span>1994-02-15</span></div>
+					</li>
+				</ul>
+				<ul class="edit-area">
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>用户名</span></div>
+						<div class="info-show"><input type="text" value="呆呆的木头人"></div>
+						<!-- <div class="tips alert alert-warning" role="alert"><span class="err-tip">错误信息提示</span></div> -->
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>性&nbsp;别</span></div>
+						<div class="info-show">
+							<input class="" type="radio" name="sex" checked="checked">
+							<span class="">女</span>
+							<input class="" type="radio" name="sex">
+							<span class="">男</span>
+						</div>
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>生&nbsp;日</span></div>
+						<div class="info-show">
+							<input type="date">
+						</div>
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>简&nbsp;介</span></div>
+						<div class="info-show"><textarea value="never quit,never stop"></textarea></div>
+						<!-- <div class="tips alert alert-warning" role="alert"><span class="err-tip">字数多余140</span></div> -->
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>邮&nbsp;箱</span></div>
+						<div class="info-show"><input value="123@qq.com" type="text"></div>
+						<!-- <div class="tips alert alert-warning" role="alert"><span class="err-tip">邮箱格式不正确</span></div> -->
+					</li>
+					<li class="clearfix profile-item">
+						<div class="ex-tips"><span>注册时间</span></div>
+						<div class="info-show"><span>1994-02-15</span></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="right-nav">
+			<div class="focus-fans-module">
+				<div class="row focus-fans">
+					<div class="col-lg-6 focus"><div class="row"><a href="#">51</a></div><div class="row"><span>关注</span></div></div>
+					<div class="col-lg-6 fans"><div class="row"><a href="#">51</a></div><div class="row"><span>粉丝</span></div></div>
+				</div>
+			</div>
+			<div class="btn-edit-article" style="display: none;">
+				<span class="glyphicon glyphicon-edit"></span>
+				<span class="btn-edit-title">发布文章</span>
+			</div>
+		</div>
+		<div class="fans-focus-module" style="display: none;">
+			<div class="focus-fans-list">
+				<div class="focus-fans-header">
+					<ul>
+						<li class="focus-header"><a href="#">关注</a></li>
+						<li class="fans-header"><a href="#">粉丝</a></li>
+					</ul>
+				</div>
+				<ul>
+					<!-- 
+					<li>
+						<a href="#">
+							<div class="focus-user-img">
+								<img src="../images/9.jpg">
+							</div>
+							<div class="focus-user-info">
+								<div class="focus-username">
+									<span>呆呆的木头人</span>
+								</div>
+								<div class="focus-introduce">
+									never quit, never stop
+								</div>
+							</div>
+							<div class="cancle-focus">
+								<button class="btn btn-danger btn-sm">取消关注</button>
+							</div>
+						</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="news-edit-module" style="display: none;">
+			<table class="table table-striped">
+				<thead>
+					<tr><th>名称项</th>
+						<th>编辑项</th>
+					</tr></thead>
+					<tbody>
+						<tr>
+							<td>
+								标题
+							</td>
+							<td>
+								<div>
+									<input id="title" class="newsedit-input" type="text" placeholder="新闻标题"/>
+								</div>
+							</td>
+						</tr> 
+						<tr>
+							<td>
+								关键词
+							</td>
+							<td>
+								<div>
+									<input id="keyword" class="newsedit-input"  type="text" placeholder="50字以内"/>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>      
+								所属分类
+							</td>
+							<td>
+								<div class="dropdown">
+									<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										分类选择	
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<script id="editor" type="text/plain" style="width: inherit;height: 300px;"></script>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="submit-area">
+					<button class="btn btn-success btn-lg" id="save">确认提交</button>
+					<button class="btn btn-warning btn-lg">注意事项</button>
+					<button class="btn btn-info btn-lg">流程说明</button>   	  	
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../bootstrap/js/bootstrap.min.js"></script>
+		<script src="../ueditor/ueditor.config.js"> </script>
+		<script src="../ueditor/ueditor.all.min.js"> </script>
+		<script src="../ueditor/lang/zh-cn/zh-cn.js"></script>
+		<script src="../js/editor.js"></script>
+
+	</body>
+	</html>
